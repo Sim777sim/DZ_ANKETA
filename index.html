@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        var surname = prompt('Укажите свою фамилию:');
+        while (!(isNaN(surname))) {
+            surname = prompt('Укажите свою фамилию!!!');
+        }
+        var name = prompt('Укажите свое имя:');
+        while (!(isNaN(name))) {
+            name = prompt('Укажите свою имя!!!');
+        }
+        var middleName = prompt('Укажите свое очество:');
+        while (!(isNaN(middleName))) {
+            middleName = prompt('Укажите свою очество!!!');
+        }
+
+        do {
+            var age = prompt('Укажите свой возраст в годах: ');
+        } while ((isNaN(age)) || age == '');
+
+        var ageDay = ('\nВаш возраст в днях: ' + age * 365);
+        var after = (parseInt(age) + 5);
+
+        var man = confirm('Ваш пол: Мужской?')
+        if (man == true) {
+            man = 'Мужской'
+            if (age < 62) {
+                pension = 'нет';
+            } else {
+                pension = 'да';
+            }
+        } else {
+            man = 'Женский'
+            if (age < 57) {
+                pension = 'нет';
+            } else {
+                pension = 'да';
+            }
+        }
+
+        alert('Здравствуйте!!! \n' + surname + ' ' + name + ' ' + middleName
+            + '\nВаш возраст в годах: ' + age + ageDay
+            + '\nЧерез 5 лет Вам будет: ' + after + ' лет'
+            + '\nВаш пол: ' + man + '\nВы на пенсии: ' + pension);
+
+      
+
+    </script>
+
+
+
+</body>
+
+</html>
